@@ -556,8 +556,7 @@ namespace elegant_otp::elegant_totp
                                                                                    std::chrono::system_clock::time_point tp
                                                                                   )
             {
-                const std::uint64_t counter =
-                    std::chrono::duration_cast<std::chrono::seconds>(tp.time_since_epoch()).count() / period;
+                const std::uint64_t counter = std::chrono::duration_cast<std::chrono::seconds>(tp.time_since_epoch()).count() / period;
 
                 std::array<uint8_t, 8> counter_bytes{};
 
